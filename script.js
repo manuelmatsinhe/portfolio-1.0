@@ -33,23 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(item);
     });
 
-    /**
-     * 3. GitHub Activity Mock
-     * Generates a random commit graph visualization.
-     */
-    const commitGrid = document.getElementById('commit-grid');
-    if (commitGrid) {
-        for (let i = 0; i < 150; i++) {
-            const cell = document.createElement('div');
-            cell.classList.add('commit-cell');
-            const random = Math.random();
-            if (random > 0.8) cell.classList.add('level-4');
-            else if (random > 0.6) cell.classList.add('level-3');
-            else if (random > 0.4) cell.classList.add('level-2');
-            else if (random > 0.2) cell.classList.add('level-1');
-            commitGrid.appendChild(cell);
-        }
-    }
+
 
     /**
      * 4. Contact Form Submission

@@ -660,22 +660,73 @@ hr.section-divider {
 }
 
 .work-card {
+    perspective: 1000px;
+    display: flex;
+    height: 100%;
+}
+
+.work-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+}
+
+.work-card:hover .work-card-inner,
+.work-card.flipped .work-card-inner {
+    transform: translateY(-5px) rotateY(180deg);
+}
+
+.work-card-front, .work-card-back {
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     background-color: var(--card-bg);
     border: 1px solid var(--card-border);
     border-radius: var(--border-radius);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
-    transition: all var(--transition-speed);
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
 }
 
-.work-card:hover {
-    transform: translateY(-5px);
+.work-card-front {
+    position: relative;
+    z-index: 2;
+    transform: rotateY(0deg);
+    height: 100%;
+}
+
+.work-card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform: rotateY(180deg);
+    padding: var(--card-padding);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(0,0,0,0.1));
+}
+
+.work-card:hover .work-card-front,
+.work-card:hover .work-card-back {
     border-color: rgba(255, 255, 255, 0.2);
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3);
+}
+
+.work-card-back p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
 }
 
 .work-img {
@@ -757,34 +808,14 @@ hr.section-divider {
     font-size: 1.1rem;
 }
 
-.commit-grid {
-    display: flex;
-    gap: 4px;
-    flex-wrap: wrap;
-    max-height: 100px;
+#github-chart {
+    /* Inverts black text to white, while preserving the green hue roughly */
+    filter: invert(1) hue-rotate(180deg) brightness(1.2);
+    transition: filter var(--transition-speed);
 }
 
-.commit-cell {
-    width: 12px;
-    height: 12px;
-    border-radius: 2px;
-    background-color: #161b22;
-}
-
-.commit-cell.level-1 {
-    background-color: #0e4429;
-}
-
-.commit-cell.level-2 {
-    background-color: #006d32;
-}
-
-.commit-cell.level-3 {
-    background-color: #26a641;
-}
-
-.commit-cell.level-4 {
-    background-color: #39d353;
+:root.light-mode #github-chart {
+    filter: none;
 }
 
 /* Marquee */
