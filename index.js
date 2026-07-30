@@ -70,7 +70,29 @@ window.onload = function () {
  */
 function enterPortfolio(event) {
     if (event) event.preventDefault();
-    sessionStorage.setItem('enteredPortfolio', 'true');
-    window.location.replace('main.html');
+
+    const verifyScreen = document.getElementById('verification-screen');
+    const progressBar = document.querySelector('.progress-bar');
+
+    if (verifyScreen && progressBar) {
+        // Show verification screen
+        verifyScreen.classList.add('active');
+
+        // Trigger progress bar animation shortly after display
+        setTimeout(() => {
+            progressBar.style.width = '100%';
+        }, 50);
+
+        // Redirect after animation completes (1.5 seconds)
+        setTimeout(() => {
+            sessionStorage.setItem('enteredPortfolio', 'true');
+            window.location.replace('index.html');
+        }, 1500);
+    } else {
+        // Fallback if elements not found
+        sessionStorage.setItem('enteredPortfolio', 'true');
+        window.location.replace('index.html');
+    }
+
     return false;
 }
