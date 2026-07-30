@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    const elementsToAnimate = document.querySelectorAll('.timeline-item, .bento-card, .work-card, .profile-card, .value-prop-card, .section-heading, .contact-form-container');
+    const elementsToAnimate = document.querySelectorAll('.timeline-item, .bento-card, .cert-card, .work-card, .profile-card, .value-prop-card, .section-heading, .contact-form-container');
     elementsToAnimate.forEach((item, index) => {
         item.classList.add('scroll-anim');
         item.style.transitionDelay = `${(index % 4) * 0.1}s`; // Staggered delay
@@ -57,42 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /**
-     * 5. Darth Manuelidous Easter Egg
-     * Triggers a Sith-themed alert and audio playback.
-     */
-    const vaderEgg = document.getElementById('vader-egg');
-    const saberAudio = document.getElementById('saber-audio');
-    if (vaderEgg) {
-        vaderEgg.addEventListener('click', () => {
-            if (saberAudio) {
-                saberAudio.currentTime = 0;
-                saberAudio.play().catch(err => console.log("Audio play failed:", err));
-            }
-            alert("Que a força do Lado Sombrio esteja com o seu código. Eu sou Darth Manuelidous.");
 
-            const originalTitle = vaderEgg.getAttribute('title');
-            vaderEgg.setAttribute('title', "Junte-se ao Lado Sombrio. Darth Manuelidous agora comanda este código.");
-
-            const icon = vaderEgg.querySelector('.vader-icon');
-            if (icon) {
-                icon.style.color = "#F00";
-                icon.style.filter = "drop-shadow(0 0 10px #F00)";
-                icon.style.opacity = "1";
-            }
-
-            console.log("Lorde Sith Darth Manuelidous: [ATIVADO]");
-
-            setTimeout(() => {
-                vaderEgg.setAttribute('title', originalTitle);
-                if (icon) {
-                    icon.style.color = "var(--text-color)";
-                    icon.style.filter = "none";
-                    icon.style.opacity = "0.9";
-                }
-            }, 4000);
-        });
-    }
 
     /**
      * 6. Theme Toggle (Light/Dark Mode)
@@ -189,4 +154,47 @@ document.addEventListener('DOMContentLoaded', () => {
             dynamicIsland.classList.toggle('show', statusTag.getBoundingClientRect().bottom < 0);
         }
     });
+
+    /**
+     * 9. Certifications Modal Logic
+     */
+    const certCards = document.querySelectorAll('.cert-card');
+    const certModal = document.getElementById('cert-modal');
+    const certModalClose = document.getElementById('cert-modal-close');
+    
+    if (certModal && certModalClose) {
+        certCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const titleEl = document.getElementById('modal-title');
+                if (titleEl) titleEl.innerHTML = '<i class="ph ph-certificate"></i> ' + card.dataset.title;
+                
+                const issuerEl = document.getElementById('modal-issuer');
+                if (issuerEl) issuerEl.textContent = card.dataset.issuer;
+                
+                const dateEl = document.getElementById('modal-date');
+                if (dateEl) dateEl.textContent = card.dataset.date;
+                
+                const credentialEl = document.getElementById('modal-credential');
+                if (credentialEl) credentialEl.textContent = card.dataset.credential;
+                
+                const skillsEl = document.getElementById('modal-skills');
+                if (skillsEl) skillsEl.textContent = card.dataset.skills;
+                
+                const descEl = document.getElementById('modal-desc');
+                if (descEl) descEl.innerHTML = card.dataset.desc;
+                
+                certModal.classList.add('active');
+            });
+        });
+
+        certModalClose.addEventListener('click', () => {
+            certModal.classList.remove('active');
+        });
+
+        certModal.addEventListener('click', (e) => {
+            if (e.target === certModal) {
+                certModal.classList.remove('active');
+            }
+        });
+    }
 });

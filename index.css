@@ -5,6 +5,11 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
+html {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
 :root {
     /* Dark Mode (Default) */
     --bg-color: #121212;
@@ -53,6 +58,7 @@ body {
     align-items: center;
     min-height: 100vh;
     overflow-x: hidden;
+    max-width: 100vw;
     transition: background-color 0.3s, color 0.3s;
 }
 
