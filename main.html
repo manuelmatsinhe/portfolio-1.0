@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manuel Matsinhe // Portfolio</title>
+
+    <!-- SEO & Metadata -->
+    <meta name="description"
+        content="Portfolio of Manuel Matsinhe - Software Engineer, Data Scientist, and Networks and Security Enthusiast.">
+    <meta property="og:title" content="Manuel Matsinhe // Portfolio">
+    <meta property="og:description"
+        content="Portfolio of Manuel Matsinhe - Software Engineer, Data Scientist, and Networks and Security Enthusiast.">
+    <meta property="og:image" content="assets/mm_logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="assets/mm_logo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/mm_logo.png">
+
+    <script>
+        // Force users to go through the intro page first
+        if (!sessionStorage.getItem('enteredPortfolio')) {
+            window.location.replace('firstpage.html');
+        }
+    </script>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+</head>
+
+<body>
+    <!-- Dynamic Island -->
+    <div id="dynamic-island" class="dynamic-island">
+        <div class="island-content">
+            <img src="assets/manuel_photo.jpg" alt="Manuel"
+                style="width: 24px; height: 24px; border-radius: 50%; object-fit: cover; border: 1px solid rgba(255,255,255,0.2);">
+            <span class="island-text">Manuel M.</span>
+            <span style="color: #4CAF50; margin: 0 4px;">•</span>
+            <i class="ph-fill ph-circle status-icon" style="color: #4CAF50;"></i>
+            <span class="island-text">Available</span>
+        </div>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="bg-animation"></div>
+
+    <!-- Sidebar Navigation -->
+    <nav id="sidebar" class="sidebar">
+        <ul class="nav-links">
+            <li><a href="#hero" title="Home"><i class="ph ph-house"></i><span class="nav-text">Home</span></a></li>
+            <li><a href="#about" title="About"><i class="ph ph-user"></i><span class="nav-text">About</span></a></li>
+            <li><a href="#works" title="Works"><i class="ph ph-briefcase"></i><span class="nav-text">Works</span></a>
+            </li>
+            <li><a href="#experience" title="Experience"><i class="ph ph-wrench"></i><span
+                        class="nav-text">Tools</span></a></li>
+            <li><a href="#certifications" title="Certifications"><i class="ph ph-certificate"></i><span
+                        class="nav-text">Certifs</span></a></li>
+            <li><a href="#hire-me" title="Hire Me"><i class="ph ph-handshake"></i><span class="nav-text">Hire
+                        Me</span></a></li>
+            <li><a href="#contact" title="Contact"><i class="ph ph-paper-plane-tilt"></i><span
+                        class="nav-text">Contact</span></a></li>
+        </ul>
+        <div class="theme-toggle" id="theme-toggle" title="Toggle Light/Dark Mode">
+            <i class="ph ph-moon" id="theme-icon"></i>
+        </div>
+    </nav>
+
+    <main class="container main-content">
+        <!-- Section 1: Hero / Intro -->
+        <section id="hero" class="hero-section">
+            <div class="hero-left">
+                <div class="status-tag"><i class="ph-fill ph-circle status-icon" style="color: #4CAF50;"></i> Available
+                    for Freelance</div>
+                <h1>Hello, I am Manuel <i class="ph ph-hand-waving hello-icon"></i></h1>
+                <h2>Computer Science Student, Software Engineer, Data Scientist & Analyst, Networks and Security Enthusiast</h2>
+                <p class="intro-bio">Crafting robust code, sleek digital experiences, and scalable software solutions.
+                    1+ year of hands-on experience in Web Development.</p>
+                <div class="action-buttons">
+                    <a href="javascript:void(0)" class="btn btn-secondary"
+                        onclick="alert('CV Download coming soon!')">Download CV</a>
+                    <a href="#contact" class="btn btn-primary">Let's Connect</a>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="lanyard-container">
+                    <div class="strap"></div>
+                    <div class="badge-clip"></div>
+                    <div class="badge-card">
+                        <img src="assets/manuel_photo.jpg" alt="Manuel Matsinhe Profile Photo">
+                        <div class="badge-info">
+                            <span class="badge-name">Manuel M.</span>
+                            <span class="badge-role">CS Student • SWE • Data Analyst</span>
+                            <span class="barcode">||||| ||| ||| | ||</span>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- Section 2: About Me -->
+        <section id="about" class="about-section">
+            <h2 class="section-heading">// About Me</h2>
+            <div class="bento-grid">
+                <div class="bento-card academic">
+                    <h3><i class="ph ph-graduation-cap card-icon"></i> Academic Journey</h3>
+                    <p>Computer Science student at <strong>ISUTC</strong> (Instituto Superior de Transportes e
+                        Comunicações).</p>
+                </div>
+                <div class="bento-card organization">
+                    <h3><i class="ph ph-buildings card-icon"></i> Organization</h3>
+                    <p>Active member / contributor at <strong>Build and Learn IT</strong>.</p>
+                </div>
+                <div class="bento-card experience">
+                    <h3><i class="ph ph-briefcase card-icon"></i> Experience</h3>
+                    <p>1 Year of experience delivering web solutions and freelance software tools.</p>
+                </div>
+                <div class="bento-card culture">
+                    <h3><i class="ph ph-sneaker card-icon"></i> Culture & Interests</h3>
+                    <p>Streetwear/Skate aesthetic, basketball enthusiast, fragrance culture, music, and deep passion for
+                        tech lore & pop culture.</p>
+                </div>
+                <div class="vader-egg-container"
+                    style="grid-column: 1 / -1; display: flex; flex-direction: column; align-items: center; gap: 0.8rem; padding: 2rem; margin-top: 3rem;">
+                    <span
+                        style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; font-weight: 600;">Toggle
+                        button for a Sith surprise</span>
+                    <button class="vader-egg" id="vader-egg" title="Invocando Darth Manuelidous..."
+                        style="background: var(--card-bg); border: 1px solid var(--card-border); cursor: pointer; padding: 1rem 1.5rem; border-radius: 16px; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(24px); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15); transition: all 0.3s;">
+                        <svg class="vader-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            style="width: 32px; height: 32px; color: var(--text-color); opacity: 0.9; transition: all 0.3s;">
+                            <path d="M12 2C8 2 4 5 4 10v6l4 4h8l4-4v-6c0-5-4-8-8-8Z" />
+                            <path d="M9 20v2" />
+                            <path d="M15 20v2" />
+                            <path d="M12 14v6" />
+                            <path d="M7 10h10" />
+                            <path d="M12 10v4" />
+                            <path d="m8 14 2 2" />
+                            <path d="m16 14-2 2" />
+                        </svg>
+                    </button>
+                    <audio id="saber-audio" src="assets/lightsaber.mp3" preload="auto"></audio>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- Section 3: Featured Works -->
+        <section id="works" class="works-section">
+            <h2 class="section-heading">// Featured Works <span class="subtitle">— Projects currently in active
+                    development</span></h2>
+            <div class="works-grid">
+                <div class="work-card" onclick="this.classList.toggle('flipped')">
+                    <div class="work-card-inner">
+                        <div class="work-card-front">
+                            <img src="assets/skeleton_skater.png" alt="Skater Community" class="work-img">
+                            <div class="work-content">
+                                <div class="work-tag">In Progress / Design & Frontend</div>
+                                <h3>Skater Community App</h3>
+                                <p>Interactive HTML5 platform built for skater culture, street art, and community networking.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="work-card-back">
+                            <h3>Skater Community</h3>
+                            <p>An immersive digital space designed to connect skaters worldwide. Built with modern web tech to ensure a fluid experience.</p>
+                            <a href="https://github.com/manuelmatsinhe" target="_blank" class="btn btn-primary"><i class="ph ph-github-logo"></i> View Repository</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-card" onclick="this.classList.toggle('flipped')">
+                    <div class="work-card-inner">
+                        <div class="work-card-front">
+                            <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                alt="Waste Management" class="work-img">
+                            <div class="work-content">
+                                <div class="work-tag highlight-tag">In Progress / Full-Stack & Data</div>
+                                <h3>Maputo Recycling & Waste Management</h3>
+                                <p>Logistics, milestone tracking, and community environmental impact platform.</p>
+                            </div>
+                        </div>
+                        <div class="work-card-back">
+                            <h3>Eco Tracking</h3>
+                            <p>Empowering local communities with data-driven logistics to handle waste management sustainably.</p>
+                            <a href="https://github.com/manuelmatsinhe" target="_blank" class="btn btn-primary"><i class="ph ph-github-logo"></i> View Repository</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-card" onclick="this.classList.toggle('flipped')">
+                    <div class="work-card-inner">
+                        <div class="work-card-front">
+                            <img src="assets/whatsapp_bot_logo.png" alt="WhatsApp Bot" class="work-img">
+                            <div class="work-content">
+                                <div class="work-tag">In Progress / AI Integration & API</div>
+                                <h3>WhatsApp Agent for Business</h3>
+                                <p>Automated conversational assistant and client engagement engine.</p>
+                            </div>
+                        </div>
+                        <div class="work-card-back">
+                            <h3>AI Agent</h3>
+                            <p>Leveraging powerful APIs to automate responses, handle client inquiries, and drive business growth on WhatsApp.</p>
+                            <a href="https://github.com/manuelmatsinhe" target="_blank" class="btn btn-primary"><i class="ph ph-github-logo"></i> View Repository</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-card coming-soon" onclick="this.classList.toggle('flipped')">
+                    <div class="work-card-inner">
+                        <div class="work-card-front">
+                            <div class="work-img-placeholder">
+                                <i class="ph ph-rocket-launch"></i>
+                            </div>
+                            <div class="work-content">
+                                <div class="work-tag coming-tag">Coming Soon</div>
+                                <h3>Meaningful Next Project</h3>
+                                <p>Teaser showcasing upcoming software engineering ventures and experiments.</p>
+                            </div>
+                        </div>
+                        <div class="work-card-back">
+                            <h3>Stay Tuned</h3>
+                            <p>Something awesome is brewing in the lab. It combines everything I love about code and design.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- Section 4: Stacks, Tools & Experience -->
+        <section id="experience" class="experience-section">
+            <h2 class="section-heading">// Stacks, Tools & Experience</h2>
+
+            <div class="github-activity">
+                <h3>A. Realtime GitHub Activity Grid</h3>
+                <div class="github-chart-container" style="text-align: center; overflow-x: auto; padding-top: 1rem;">
+                    <!-- ghchart generates a clean SVG of the user's Github Contributions -->
+                    <img src="https://ghchart.rshah.org/4CAF50/manuelmatsinhe" alt="Manuel Matsinhe's Github Activity" style="min-width: 700px; margin: 0 auto; display: block;" id="github-chart">
+                </div>
+            </div>
+
+            <div class="marquee-container">
+                <div class="marquee">
+                    <span>
+                        <i class="devicon-html5-plain colored"></i> HTML5 • 
+                        <i class="devicon-css3-plain colored"></i> CSS3 • 
+                        <i class="devicon-javascript-plain colored"></i> JavaScript • 
+                        <i class="devicon-python-plain colored"></i> Python • 
+                        <i class="devicon-java-plain colored"></i> Java • 
+                        <i class="devicon-html5-plain colored"></i> HTML5 • 
+                        <i class="devicon-css3-plain colored"></i> CSS3 • 
+                        <i class="devicon-javascript-plain colored"></i> JavaScript • 
+                        <i class="devicon-python-plain colored"></i> Python • 
+                        <i class="devicon-java-plain colored"></i> Java • 
+                        <i class="devicon-html5-plain colored"></i> HTML5 • 
+                        <i class="devicon-css3-plain colored"></i> CSS3 • 
+                        <i class="devicon-javascript-plain colored"></i> JavaScript • 
+                        <i class="devicon-python-plain colored"></i> Python • 
+                        <i class="devicon-java-plain colored"></i> Java • 
+                        <i class="devicon-html5-plain colored"></i> HTML5 • 
+                        <i class="devicon-css3-plain colored"></i> CSS3 • 
+                        <i class="devicon-javascript-plain colored"></i> JavaScript • 
+                        <i class="devicon-python-plain colored"></i> Python • 
+                        <i class="devicon-java-plain colored"></i> Java • 
+                    </span>
+                </div>
+            </div>
+
+            <div class="tooling-card bento-card" style="margin-top: 2rem;">
+                <h3 style="margin-bottom: 1.5rem; text-align: center;"><i class="ph ph-toolbox card-icon"></i> Ecosystem
+                    & Tooling</h3>
+                <div class="tooling-bubble-container">
+                    <span class="bubble"><i class="devicon-html5-plain colored"></i> HTML5</span>
+                    <span class="bubble"><i class="devicon-css3-plain colored"></i> CSS3</span>
+                    <span class="bubble"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+                    <span class="bubble"><i class="devicon-python-plain colored"></i> Python</span>
+                    <span class="bubble"><i class="devicon-java-plain colored"></i> Java</span>
+                    <span class="bubble"><i class="devicon-mysql-plain colored"></i> MySQL</span>
+                    <span class="bubble"><i class="devicon-firebase-plain colored"></i> Firebase</span>
+                    <span class="bubble"><i class="devicon-git-plain colored"></i> Git</span>
+                    <span class="bubble"><i class="devicon-github-original colored"></i> GitHub</span>
+                    <span class="bubble"><i class="devicon-docker-plain colored"></i> Docker</span>
+                    <span class="bubble"><i class="devicon-vscode-plain colored"></i> VS Code</span>
+                    <span class="bubble"><i class="devicon-eclipse-plain colored"></i> Eclipse</span>
+                    <span class="bubble"><i class="devicon-google-plain colored"></i> Google Antigravity IDE</span>
+                    <span class="bubble"><i class="ph ph-cursor" style="color: #4A90E2;"></i> Cursor</span>
+                    <span class="bubble"><i class="ph ph-sparkle" style="color: #F4B400;"></i> Google Gemini</span>
+                    <span class="bubble"><i class="ph ph-robot" style="color: #D32F2F;"></i> Claude</span>
+                    <span class="bubble"><i class="devicon-ubuntu-plain colored"></i> Ubuntu CLI</span>
+                    <span class="bubble"><i class="ph ph-router" style="color: #049fd9;"></i> Cisco Packet Tracer</span>
+                </div>
+            </div>
+
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>01 / <i class="devicon-javascript-plain colored"></i> Software Development & Web Dev</h3>
+                        <p>Building with purpose. Programming isn't just about syntax; it's about engineering solutions
+                            that solve real-world problems and leave a tangible impact.</p>
+                        <div class="timeline-tech">
+                            <i class="devicon-html5-original colored"></i>
+                            <i class="devicon-css3-original colored"></i>
+                            <i class="devicon-javascript-original colored"></i>
+                            <i class="devicon-react-original colored"></i>
+                            <i class="devicon-nodejs-plain colored"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>02 / <i class="devicon-python-plain colored"></i> Data Science & Analytics</h3>
+                        <p>Seeing the bigger picture. Data transforms raw information into actionable clarity, revealing
+                            patterns that guide smarter, human-centric decisions.</p>
+                        <div class="timeline-tech">
+                            <i class="devicon-python-original colored"></i>
+                            <i class="devicon-pandas-original colored"></i>
+                            <i class="devicon-numpy-original colored"></i>
+                            <i class="devicon-jupyter-plain colored"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>03 / <i class="ph-fill ph-shield-check" style="color: #4CAF50;"></i> Networks and Security (Newbie &
+                            Growing)</h3>
+                        <p>Guarding the digital frontier. In a hyper-connected world, protecting data and privacy is
+                            paramount—exploring security fundamentals to build resilient, trustworthy systems.</p>
+                        <div class="timeline-tech">
+                            <i class="devicon-kali-plain colored"></i>
+                            <i class="devicon-bash-plain colored"></i>
+                            <i class="devicon-linux-plain colored"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- Section: Certifications -->
+        <section id="certifications" class="certifications-section">
+            <h2 class="section-heading">// Certifications</h2>
+            <div class="bento-grid">
+                <div class="bento-card">
+                    <h3><i class="ph ph-certificate card-icon"></i> Certification Name</h3>
+                    <p>Details about your certification go here.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- Section 5: Why Hire Me & Link Up -->
+        <section id="hire-me" class="hire-me-section">
+            <h2 class="section-heading">Why I'm a Great Fit for Your Team</h2>
+            <div class="hire-grid">
+                <div class="profile-card" onclick="this.classList.toggle('flipped')">
+                    <div class="profile-card-inner">
+                        <div class="profile-card-front">
+                            <div class="flip-hint"><i class="ph ph-arrows-clockwise"></i> Click to flip</div>
+                            <img src="assets/manuel_photo.jpg" alt="Manuel Profile">
+                            <ul class="attributes">
+                                <li><i class="ph ph-check-circle attribute-icon"></i> Dedicated</li>
+                                <li><i class="ph ph-rocket attribute-icon"></i> Quick Learner</li>
+                                <li><i class="ph ph-handshake attribute-icon"></i> Collaborative</li>
+                                <li><i class="ph ph-lightning attribute-icon"></i> Flexible Freelancer</li>
+                            </ul>
+                        </div>
+                        <div class="profile-card-back">
+                            <h3><i class="ph ph-seal-check"></i> My Guarantee</h3>
+                            <p>I promise to deliver high-quality code, communicate transparently, and remain dedicated
+                                until the project perfectly aligns with your vision.</p>
+                            <p class="signature">Manuel Matsinhe</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="value-prop-card">
+                    <ul>
+                        <li>Strong foundational principles in Object-Oriented Software Engineering, Web Development, and
+                            Web Architecture.</li>
+                        <li>Adaptability across modern developer tooling and AI-assisted workflows.</li>
+                        <li>Deep passion for intuitive UI/UX mixed with clean, maintainable backend logic.</li>
+                        <li>Relentless drive to learn, ship, and iterate.</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary cta-btn">Link Up / Let's Connect</a>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- Section 6: Contact & Direct Engagement -->
+        <section id="contact" class="contact-section">
+            <h2 class="section-heading">// Contact & Direct Engagement</h2>
+
+            <div class="contact-form-container bento-card">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Write your message here..." rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary send-btn">
+                        <i class="ph-bold ph-paper-plane-right"></i> Send Message
+                    </button>
+                </form>
+            </div>
+
+            <hr class="social-divider-line">
+            <p class="social-contact-text">or contact us on:</p>
+            <div class="social-icons">
+                <a href="https://github.com/manuelmatsinhe" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg></a>
+                <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24">
+                        <path
+                            d="M12.031 0C5.397 0 .013 5.385.013 12.019c0 2.122.553 4.195 1.604 6.015L.051 24l6.117-1.605c1.761.954 3.738 1.458 5.86 1.458 6.634 0 12.018-5.385 12.018-12.019C24.046 5.385 18.665 0 12.031 0zM12.031 21.849c-1.8 0-3.567-.483-5.11-1.401l-.366-.217-3.8.997 1.01-3.712-.239-.379c-1.01-1.597-1.543-3.454-1.543-5.368C2.013 6.223 6.746 1.488 12.03 1.488c5.285 0 10.017 4.733 10.017 10.018s-4.732 10.018-10.016 10.018zm5.49-7.502c-.302-.151-1.782-.879-2.058-.981-.277-.101-.478-.151-.679.151-.202.302-.781.981-.956 1.182-.176.202-.352.227-.654.076-1.576-.79-2.584-1.39-3.59-2.909-.261-.393.307-.367.876-1.503.076-.151.038-.277-.038-.428-.076-.151-.679-1.637-.931-2.242-.244-.589-.493-.509-.679-.519-.176-.01-.378-.01-.579-.01-.202 0-.528.076-.805.378-.277.302-1.056 1.033-1.056 2.52s1.082 2.923 1.233 3.125c.151.202 2.13 3.254 5.161 4.56.721.311 1.284.497 1.722.636.723.23 1.381.198 1.899.12.581-.088 1.782-.729 2.033-1.435.252-.705.252-1.31.176-1.435-.075-.126-.276-.202-.578-.353z" />
+                    </svg></a>
+                <a href="https://www.linkedin.com/in/manuelmatsinhe" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg></a>
+                <a href="https://www.reddit.com/u/Astro-pato178" target="_blank" rel="noopener noreferrer" aria-label="Reddit"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <title>Reddit</title>
+                        <path
+                            d="M12 0C5.373 0 0 5.373 0 12c0 3.314 1.343 6.314 3.515 8.485l-2.286 2.286C.775 23.225 1.097 24 1.738 24H12c6.627 0 12-5.373 12-12S18.627 0 12 0Zm4.388 3.199c1.104 0 1.999.895 1.999 1.999 0 1.105-.895 2-1.999 2-.946 0-1.739-.657-1.947-1.539v.002c-1.147.162-2.032 1.15-2.032 2.341v.007c1.776.067 3.4.567 4.686 1.363.473-.363 1.064-.58 1.707-.58 1.547 0 2.802 1.254 2.802 2.802 0 1.117-.655 2.081-1.601 2.531-.088 3.256-3.637 5.876-7.997 5.876-4.361 0-7.905-2.617-7.998-5.87-.954-.447-1.614-1.415-1.614-2.538 0-1.548 1.255-2.802 2.803-2.802.645 0 1.239.218 1.712.585 1.275-.79 2.881-1.291 4.64-1.365v-.01c0-1.663 1.263-3.034 2.88-3.207.188-.911.993-1.595 1.959-1.595Zm-8.085 8.376c-.784 0-1.459.78-1.506 1.797-.047 1.016.64 1.429 1.426 1.429.786 0 1.371-.369 1.418-1.385.047-1.017-.553-1.841-1.338-1.841Zm7.406 0c-.786 0-1.385.824-1.338 1.841.047 1.017.634 1.385 1.418 1.385.785 0 1.473-.413 1.426-1.429-.046-1.017-.721-1.797-1.506-1.797Zm-3.703 4.013c-.974 0-1.907.048-2.77.135-.147.015-.241.168-.183.305.483 1.154 1.622 1.964 2.953 1.964 1.33 0 2.47-.81 2.953-1.964.057-.137-.037-.29-.184-.305-.863-.087-1.795-.135-2.769-.135Z" />
+                    </svg></a>
+                <a href="https://x.com/PatoAstro13137" target="_blank" rel="noopener noreferrer" aria-label="X"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <title>X</title>
+                        <path
+                            d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z" />
+                    </svg></a>
+                <a href="https://daily.dev/astropato" target="_blank" rel="noopener noreferrer" aria-label="daily.dev"><svg role="img" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <title>daily.dev</title>
+                        <path
+                            d="M18.29 5.706a1.405 1.405 0 0 0-1.987 0L4.716 17.296l1.324-2.65-2.65-2.649 3.312-3.311 2.65 2.65 1.986-1.988-3.642-3.642a1.405 1.405 0 0 0-1.987 0L.411 11.004a1.404 1.404 0 0 0 0 1.987l4.305 4.304.993.993a1.405 1.405 0 0 0 1.987 0L19.285 6.7l-.993-.994Zm-.332 3.647 2.65 2.65-4.306 4.305a1.404 1.404 0 1 0 1.986 1.986l5.299-5.298a1.404 1.404 0 0 0 0-1.987l-4.305-4.304-1.324 2.648Z" />
+                    </svg></a>
+                <a href="https://www.instagram.com/ton_serveur_" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg role="img" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <title>Instagram</title>
+                        <path
+                            d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077" />
+                    </svg></a>
+            </div>
+        </section>
+
+        <footer>
+            <p><i class="ph ph-map-pin"></i> Maputo, Mozambique</p>
+            <p class="signature">Manuel Matsinhe</p>
+            <p class="copyright">&copy; <span id="year"></span> Manuel Matsinhe. All rights reserved.</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
